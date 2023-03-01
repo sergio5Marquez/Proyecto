@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // Crea una función que tenga dos argumentos: num1, num2, y que deuelva como 
+        //  resultado la suma de ambos números. Se supone que se usarán solo números
+        //  válidos.
+        //  function suma(num1,num2){
+        //     return (num1+num2)
+        //  }
+        //  let a,b
+        //  a=parseInt(prompt("Ingrese un numero"))
+        //  b=parseInt(prompt("Ingrese el segundo numero"))
+        //  alert(suma(a,b))
+
+        // Esta función se va a llamar esPar(num) y deberá devolver verdadero si el 
+        // argumento es par y falso si es impar. Se acepta que solo se usarán números
+        // válidos.
+        //      function esPar(num1){
+        //          return (num1 %2==0)
+        //      }
+        //      let num=parseInt(prompt("ingrese un numero"))
+        //      alert(esPar(num))
+        //3 Función que calcule si un número es múltiplo de otro. La función recibirá 
+        // dos argumentos, el primero será el supuesto mutiplo del segundo argumento.
+        // function mutiplo(num1,num2){
+        //     return(num1 % num2 == 0)
+        // }        
+        // let n1,n2
+        // n1=parseInt(prompt("Ingrese un numero 1"))
+        // n2=parseInt(prompt("Ingrese un numero 2"))
+        // alert(mutiplo(n1,n2))
+        //4  Definir una función que cree una cadena de letras repetidas tantas 
+        // veces como le digamos. La función recibe dos argumentos: la letra y el 
+        // número de repeticiones.
+        //  function cantidad(abc,n){
+        //     let cad=``
+        //     for(let i = 0 ; i < n ; i++){
+        //         cad += abc
+        //     }
+        //     return cad
+        //  }
+
+        //  let letra,num=0
+        //  letra=prompt("Ingrese una letra")
+        //  num=parseInt(prompt("Ingrese la cantidad de veses qe qiera qe se repita"))
+        //  alert(cantidad(letra,num))
+
+        //5 Usa el algoritmo de Euclides para diseñar una función que determine el 
+        // máximo común divisor de dos números. Bueno este algoritmo es bien simple. 
+        // Para clacular el mcd de A y B:
+
+        // Si A = 0 entonces MCD(A,B)=B, ya que el MCD(0,B)=B, y podemos detenernos.  
+        // Si B = 0 entonces MCD(A,B)=A, ya que el MCD(A,0)=A, y podemos detenernos.  
+        // Calcula el resto de A/B
+        // Asigna a A el valor de B
+        // Asigna a B el resto
+        // Repite hasta que A o B sean 0.
+        // function mcd(n1,n2){
+        //     let mcd,resto;
+        //     while (n1 !=0 && n2 !=0){
+        //         resto= n1%n2
+        //         n1=n2
+        //         n2=resto
+        //     }
+        //     if (n1==0) mcd =n2
+        //     if (n2==0) mcd =n1
+        //     return  mcd   
+        // }        
+        // let num,num0
+        // num=parseInt(prompt("Ingrese un numero"))
+        // num0=parseInt(prompt("Ingrese un numero"))
+        // alert(`el mcd de ${num} y ${num0} es :`+mcd(num,num0))
+
+        //6 Diseña una función que calcule el factorial de un número, usa una función ---------------------------------------------------------------
+        // recursiva (que se llama a si misma). Recuerda que el factorial de un 
+        // número es el resultado de multiplicar cada número por el anterior hasta 
+        // llegar a 1. Y el factorail de 0 es por definición 1
+        // function recursiva(n1){
+        //     if(n1==0){
+        //         return 1
+        //     }
+        //     return n1*recursiva(n1-1)
+        // }
+        // let num1=parseInt(prompt("Ingrese un numero"))
+        // document.write("el factorial de "+num1+" es de "+recursiva(+num1))
+
+        //7 Escribir una función que reciba un número como argumento y lo devuelva 
+        // invertido, o sea, escrito del revés. Usar esta función para determinar si
+        //  un número es capicúa (palíndromo)
+        // function invertir(num){
+        // var cad= '' 
+        // while (num>0){
+        //     cad += num%10; 
+        //   	 	num = parseInt(num/10)
+        //  }
+        // return parseInt(cad);
+        // }
+        // var dato;
+        // dato = parseInt(prompt("Escirbe un número"));
+        // if (dato == invertir(dato)){
+        //   	alert(dato+" es palíndromo")
+        //   }
+        // else{
+        //    alert(dato+" no es palíndromo")
+        //  }  
+        //8 Escribe una función que recibe como argumento un precio y el porcentaje 
+        // de impuestos. La función devolverá el valor total a pagar, teniendo en 
+        // cuenta que al precio se le descuenta un porcentaje del 10% si es mayor 
+        // de 100 euros.
+        //  function precioFinal(precio,imp){
+        //      let descuento,impuestos,total
+        //      impuestos = precio / 100 * imp
+        //     if (precio>=100){
+        //          descuento= (precio / 100) * 10
+        //          total=precio-descuento
+        //          return total+impuestos
+        //      }else{      
+        //          return precio + impuestos
+        //      }
+        //  }
+        //  let num=parseInt(prompt("Ingresa el precio del producto"))
+        //  let impuesto=parseInt(prompt("Ingrese el impuesto del producto"))
+        //  document.write("producto: $"+num+" mas impuestos "+precioFinal(num,impuesto))
+        // // 200 5 
+        // function total(precio, impto){
+        // var neto;
+        // if (precio > 100){
+        //   	 	precio = precio - 10*precio/100;
+        // }
+        // neto = precio + precio*impto/100;
+        // return neto;
+        // }
+        // var gasto, imp;
+        // gasto = parseInt(prompt('Precio total'));
+        // imp = parseInt(prompt('Impuesto %'));
+        // alert("El total  pagar es "+total(gasto, imp));
+
+        //9 En esta función se trata de convertir notas a calificaciones literales 
+        // de manera que menos de 5 es suspenso, un 5 es aprobado, el 6 es bine, el 
+        // 7 y el 8 son notable, el 9 es sobresaliente y el 10 es matrícula.
+        // function calificacion(n) {
+        //     if (n < 5) {
+        //         return "Suspenso"
+        //     } else if (n == 5) {
+        //         return "Aprobado"
+        //     } else if (n == 6) {
+        //         return "Bien"
+        //     } else if (n <= 8) {
+        //         return "Notable"
+        //     } else if (n == 9) {
+        //         return "Soblesaliente"
+        //     } else if (n == 10) {
+        //         return "Matriculado"
+        //     }
+        // }
+        // let nota = parseInt(prompt("Ingrese su nota"))
+        // alert("Calificasion: " + calificacion(nota))
+        // // otra opcion
+        // function calificacion(nota) {
+        //     var calif;
+        //     switch (nota) {
+        //         case 5:
+        //             calif = 'Aprobado';
+        //             break;
+        //         case 6:
+        //             calif = 'Bien';
+        //             break;
+        //         case 7:
+        //         case 8:
+        //             calif = 'Notable';
+        //             break;
+        //         case 9:
+        //             calif = 'Sbresaliente';
+        //             break;
+        //         case 10:
+        //             calif = 'Matrícula';
+        //             break;
+        //         default:
+        //             calif = 'Suspenso'
+        //     }
+        //     return calif;
+        // }
+        // var minota;
+        // minota = parseInt(prompt("Entrar nota de 1 a 10"));
+        // alert("tu calificación es " + calificacion(minota));
+        
+    //10 Escibe una función que devuelva el siglo al que correponde un año que 
+    // se la pasa como argumento. El siglo 1 va del año 1 al 100, el siglo 2 va 
+    // del 101 al 200....
+    // function siglo(año){
+    //     var siglo = parseInt((año - 1)/100) + 1;
+    //     return siglo;
+    // }
+    // var añoActual;
+    // añoActual = parseInt(prompt("Entrar año completo"));
+    // alert("Pertenece al siglo " + siglo(añoActual));
+
+
+    // let resultado = (n1) =>(n1 %2== 0)?"es par":"es impar"  
+    // let num = parseInt(prompt("Ingrese num"))
+    // alert(resultado(num))
+
+
+
+
+
+
+    // const objetos=["lapis","caja",432,"cama","lampara"]
+
+    // for (articulos in objetos){
+    //     document.write(articulos+`<br>`)
+    // }
+
+    // document.write(`<br>`)
+
+    // for(artic of objetos){
+    //     document.write(artic+`<br>`)  
+    // }
+    // document.write(`<br>`)
+
+    // for(let i = 0 ; i < objetos.length ; i++){
+    //     if(objetos[i] === 432){
+    //         continue;
+    //     }
+    //     document.write(objetos[i]+`<br>`)
+    // }
+
+    // document.write(`<br>`)
+
+    // for(artic in objetos){
+    //     if(objetos[artic]===432){
+    //         break;
+    //     }
+    //     document.write(objetos[artic]+`<br>`)
+    // }
+
+    // document.write(`<br>`)
+
+
+
+
+
+
+
+    // En este script deberás crear un array para guardar los nombres de los días 
+    // de la semana, empezando por 0 para el domingo. Para comprobar el funcionamiento
+    // pide al usuario un número entre 0 y 6 y devuelve el nombre del día. Se supone 
+    // que el dato tecleado estará entre 0 y 6
+    // const semana=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]
+    // let dia=parseInt(prompt("Ingrese un numero del 0 al 6"))
+    // alert(semana[dia])
+
+
+    //2 Crea un array booleano con dos valores 'verdadero' y 'falso'. Este array te 
+    // sirve para traduicr los valores true y false. Usalo para que el script muestre
+    //  un alert con el nombre vedadero si un usuario teclea un valor entre 0 y 9 y 
+    // falso en el caso contrario.
+    // const Bolean=["verdadero","falso"];
+    // let num=parseInt(prompt("Ingrese un numero del 0 al 9"));
+    //     alert(respuesta=(num <= 9 & num >= 0)? Bolean[0]:Bolean[1]);
+
+    // otra respuesta
+    // var booleano = ['falso', 'verdadero'], test, indice;
+    // test = parseInt(prompt("Teclear un número"));
+    // indice = (test <= 9 && test >= 0 )? 1:0;
+    // alert(booleano[indice]);
+
+
+
+    //3 Sin usar métodos del objeto array, diseña una función llamada sumaLista() 
+    // capaz de sumar todos los números que forman el array que se le pase como 
+    // argumento.
+    // function sumaLista(list){
+    //     let suma=0
+    //     for(let i=0; i < list.length ; i++){
+    //         suma+=list[i]
+    //     }
+    //     return suma
+    // }
+    // alert(sumaLista([15,15,20]))
+
+    //4 Diseña un script que vaya leyendo números y guardándolos en un array.Una vez
+    //  lleno mostrará el array y deberá decir cuantos números son pares y cuantos 
+    // son impares. La entrada de datos termina cuando el usuario teclea 0 o un 
+    // valor no numérico.
+
+    // Intenta resolverlo sin usar métodos del objeto array, solo indices y 
+    // longitudes de arrays.
+
+    // No debe aceptar valores no numéricos (isNaN(valor) permite detectar valores 
+    // // no numéricos).
+    // let lista=[],ind=0,pares=0,impares=0,num;
+    // do{
+    //     num=parseInt(prompt("Ingrese un numero"));
+    //     if(num !=0 && !isNaN(num)){
+    //         lista[ind] = num
+    //         ind++;
+    //     }
+    // }while(num !=0 && !isNaN(num))
+    // document.write("lista de numeros "+lista+`<br>`);
+    // for(ind = 0 ; ind < lista.length ; ind++){
+    //     if(lista[ind]%2==0 ){
+            
+    //         pares++
+    //     }else
+    //         impares++
+    // }
+    // document.write("pares: "+pares+`<br>`)
+    // document.write("Impares: "+impares)
+
+    //5 Escribe una función que pueda devolver el valor más pequeño de un array 
+    // numérico o el índice de ese valor. El segundo parámetro de la función
+    //  dirá si debe devolver el valor ("v") o el índice ("i"). No uses
+    //  métodos del objeto array.
+
+    // Se supone que el primer parámetro siempre será una matriz llena con al 
+    // menos 1 número y sin duplicados.
+
+    // Se suponer el segundo parámetro será una letra con uno de 
+    // dos valores: 'v' 'i'
+        // function devolverP(valor, letra){
+        //     let min = valor[0], posicion ;
+        //     for(let i = 0 ; i < valor.length ; i++){
+        //         if (valor[i] < min){
+        //             min = valor[i];
+        //             posicion = i ;
+        //         }
+        //     }
+        //     return (letra==="v"?min : posicion);
+        // }
+        // document.write("valor minimo "+devolverP([4,2,5,1,8],"v")+`<br>`);
+        // document.write("posicion del minimo: "+devolverP([4,2,5,1,8,],"i"));
+    
+//6 Escribe una función que determina si la letra que se le pasa como argumento se
+//  encuentra contenida dentro de un array de letras que se le pasa como segundo
+//  argumento.
+
+// Se trata de resolverlo sin usar métodos del objeto array, solo el dato tipo 
+// array.
+
+// function devolver(letra,arrayLet){
+//     // for(let i = 0 ; i < arrayLet.length ; i++){
+//     //     if(letra === arrayLet[i]){
+//     //         return true
+//     //     }else{
+//     //         return false
+//     //     }    
+//     // }
+
+//     let i=0
+//     while(letra != arrayLet[i] && i < arrayLet.length  ){
+//         i++
+//     }
+//     return (i < arrayLet.length)
+// }
+// alert(devolver("a",["r","a","w","g"]))
+// alert(devolver("h",["r","a","w","g"]))
+
+//7 En este ejempo debes crear una función que reciba una array y devuelva una 
+// cadena formada por los elementos del array separados por un guión - si 
+// una letra es una vocal. La función tiene como único parámetro la letra que 
+// se quiere comprobar. Debe funcionar igual con mayúsculas y con minúsculas y 
+// por supuesto usando arrays.
+
+// Solo se aceptan letras internacionales (sin acentos)
+    // function Vocal(letra){
+    //     let vocal=["a","e","i","o","u","A","E","I","O","U"],i;
+    //     for(i = 0 ; i< vocal.length  ; i++){
+    //         if( letra === vocal[i]){
+    //             break;
+    //         }
+    //     }
+    //     return (i < vocal.length)
+    // }
+    // alert(Vocal("a"))
+    // alert(Vocal("I"))
+    // alert(Vocal("d"))
+
+//8 Escribe una función qeu reciba como argumento un array y que devuelva una
+//cadena de caracteres formada por los elementos del array separados por un guión
+
+// function funcionArray(valor){
+//     let sep=""
+//     sep=valor[0]
+//     for (let ite = 1;ite < valor.length  ; ite++){
+//         sep +="-" + valor[ite]
+//     }
+//     return sep
+// }
+// alert(funcionArray(["hola","rojo","azul"]))
+
+//9 Un servicio de atención al ciente tiene establecido turnos semanales para sus
+//empleados de manera que cada día de la semana se encarga del servicio  una 
+// persona: lunes - María, Martes - Luis, Miércoles - Antonia, Jueves - Pedro,
+// Viernes - Marisa.
+
+// Usa un array para almacenar los datos del servicio. En este array cada
+//  elemento será un para día - nombre.
+
+// Crea una función que responda con el nombre de la persona encargada del 
+// servicio sabiendo el día. Si el día no existe deberá decir
+//  que no hay servicio. Los nombres de los días deben ir en minúsculas.
+
+function semanaD(today){
+  let dias =[
+   {
+     dia: 'lunes',
+     nombre: 'maria'
+   }, {
+     dia: 'martes',
+     nombre: 'luis'
+   }, {
+     dia: 'miercoles',
+     nombre: 'antonia'
+   }, {
+     dia: 'jueves',
+     nombre: 'pedro'
+   }, {
+    dia: 'viernes',
+    nombre: 'marisa'
+  }
+  ];
+  // today.toLowerCase()
+  for(let i=0 ; i < dias.length ;i++){
+    if(dias[i].dia === today){
+      document.write("La persona a cargo de ese dia es "+dias[i].nombre)
+      // alert( "La persona a cargo de ese dia es "+dias[i].nombre)
+      // console.log( "La persona a cargo de ese dia es "+dias[i].nombre)
+    }else{
+      console.log("NO hay servicio")
+    }
+  }
+}
+semanaD('martes')
+
+
+
+
+// otra respuesta de la maquina pero tambien esta mal
+//     function servicio(dia){
+//     var servicios = [ 
+//     ['lunes', 'Maria'],
+//     ['martes', 'Luis'],
+//     ['miércoles', 'Antonia'],
+//     ['jueves', 'Pedro'],
+//     ['viernes', 'Marisa']
+//     ]
+//     var ind, persona = "No hay servcicio";
+//     for(ind = 0; ind  < servicios.length; ind++) {
+//         if (servicios[ind][0]) === dia) {
+//             persona = servicios[ind][1];
+//             break;
+//             }
+//         }
+//     return persona;
+//     }
+//     diaSemana = prompt("Teclear dia de semana ");
+//     alert("Este día se encarga "+ servico(diaSemana));
+
+
+
+    // 10 Un tienda vende monitores, teclados y ratones. Los precios se almacenan en 
+    // una estructura array conde cada elemento es un par producto - precio.
+
+    // Diseña una función que reciba como argumento el nombre de un producto 
+    // (minúscula) y devuelva su precio.
+
+    //  function precio(art){
+    // var precios = [["monitor", 200], ["teclado", 20],["ratón", 10]];
+    // var ind, precio = "Error";
+    // for (ind = 0; ind < precios.length; ind++){
+    //     if (precios[ind][0] == art){
+    //         precio = precios[ind][1];
+    //         break;
+    //     }
+    // }
+    // return precio;
+    // }
+    // var prod = prompt("Artículo");
+    // alert("El "+prod+" vale "+ precio(prod) + "€");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+// Usando un bucle for escribir un script que pida un valor entero y 
+// muestre en pantalla una lista de números desde el 0 al valor tecleado.
+// //  Los números se separarán por comas.  
+
+// let contar, max, msg='';
+// max = parseInt(prompt("Teclear un número entero"));
+// for(contar = max; contar > 0;  contar--){
+//     msg += contar + ", ";
+// }
+// msg += contar;   //Evita la coma al final
+// alert(msg);
+
+//Realizar un programa el cual muestre los números del 60 hasta el 100 de 5 en 5,
+//  estos nümeros deben ser sumados y su resultado debe ser mostrado por consola.
+//  let resultado=``
+//  let num=60
+// for (num ; num<=100 ; num+=5){
+//     resultado += num + `<br>`;
+// }
+//  resultado+=num
+//  document.write(resultado)
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

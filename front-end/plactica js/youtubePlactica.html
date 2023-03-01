@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Plactica</title>
+
+
+</head>
+<body>
+
+    <h1>30 Ejercicios de Programación para Practicar y Aprender JavaScript Desde Cero (para principiantes) 📒</h1>
+    <script type="text/javascript">
+
+        //1 programa que pida dos numeros y que nos diga cual es el mayor,
+        // el menor y si son iguales.
+        // let mayor,menor,igual
+        // let n1 =parseInt(prompt("Ingrese un numero"))
+        // let n2 =parseInt(prompt("Ingrese un numero"))
+        // if(n1 > n2 ){
+        //     mayor = n1
+        // }else{
+        //     menor = n1
+        // } 
+        // if(n1 < n2 ){
+        //     mayor = n2
+        // }else{
+        //     menor = n2
+        // }
+
+        // if(n1 ==  n2 ){
+        //     document.write(`los dos numeos ingresados son iguales n1: ${n1} y n2: ${n2}<br>`)
+        // }else {
+        //     document.write(`el numero mayor es ${mayor} <br>`)
+        //     document.write(`el numero menor es ${menor}`)
+        // }
+
+        //2 Al programa anterior: Si los numeros no son un numero o son menor o iguales
+        //  a cero, nos los vuelva a pedir
+        // let n1 = '0a'
+        // let n2 = '0a'
+        // while( n1 <=0 || n2 <=0 || isNaN(n1)  || isNaN(n2)   ){
+        //   n1 = parseInt(prompt("Ingrese un numero 1"))
+        //   n2 = parseInt(prompt("Ingrese un numero 2"))
+        // }
+        // if(n1 > n2 ){
+        //     mayor = n1
+        // }else{
+        //     menor = n1
+        // } 
+        // if(n1 < n2 ){
+        //     mayor = n2
+        // }else{
+        //     menor = n2
+        // }
+        // document.write(`el numero mayor es: ${mayor} <br>`)
+        // document.write(`el numero menor es: ${menor}`)
+        
+        //3 Utiliza un bucle,mostrar la suma y la media de los numeros introducidos
+        //  hasta introducir un numero negativo y hay mostrar el resultado.
+        // let num = 0,resultado = 0
+        // while(num >= 0){
+        //     num =parseInt(prompt("Ingrese un numero "))
+        //     if(num >=0 ){
+        //         resultado +=num
+        //     }else{
+        //         break
+        //     }
+        // }
+        // document.write(resultado)
+        
+        //4 Hacer un programa que muestre todos los numeros entre dos numeros 
+        // introducidos por el usuario.
+        // let n1= parseInt(prompt("Ingrese un numero"))
+        // let n2= parseInt(prompt("Ingrese un numero"))
+        // document.write(n1+"<br>")
+        // document.write(n2)
+
+        //5 Mostrar todos los numeros impares que hay entre dos numeros 
+        // introducidos por el usuario
+        // let num =0 ,num2=0
+        // while(num >= 0 || num2 >= 0){
+        //     num=parseInt(prompt("Ingrese el primer Nro"))
+        //     num2=parseInt(prompt("Ingrese el segundo Nro"))
+        // }
+        // document.write(num+"<br>")
+        // document.write(num2)
+
+        //6 Muestre todos los numeros divisores de un numero que mete en promt.
+        // let i = 0,divisor=" "
+        // let num=parseInt(prompt("Ingreseun numero"))
+        // for ( i = 1 ;i <= num ;i++){
+        //     if (num % i == 0 ){
+        //         divisor += i+"," 
+        //     }
+        // }
+        // document.write(divisor)
+
+        //7 Programa qe nos diga si un numero es par o impar :
+        //7.1.Ventana prompt
+        //7.2.Si no es valido que nos pida de nuevo el numero
+        // let num ="0a"
+        // while( isNaN(num) ){
+        //     num=prompt("ingrese un nuemro")
+        // }
+        // document.write(num)
+
+        //8 Tabla de multiplicar de un numero introducido por pantalla
+        // let i=0,resultado=0
+        // num=parseInt(prompt("Ingrese un numero"))
+        // for(i = 1 ; i<=10  ;i++){
+        //     document.write( num +" x " + i +" = "+  num * i +"<br>"     )
+        // }
+
+        //9 Calculadora:
+        //-Pida dos numeros por pantalla
+        //-Si metemos uno mal qe nos los vuelva a pedir
+        //-En el cuerpo de la pagina, en una alerta y por la consola el 
+        //   resultado de sumar, restar, multiplicar y dividir esas dos cifras
+        //-refactoriza el codigo para encapsularlo todo en funciones reutulizables
+        // function suma(n1,n2){
+        //     let resultado = n1+n2
+        //     alert(resultado)
+        //     console.log(resultado)
+        //     document.write("suma: "+resultado+"<br>")
+        // }
+        // function resta (num1,num2){
+        //     let resultado = num1-num2
+        //     alert(resultado)
+        //     console.log(resultado)
+        //     document.write("resta: "+resultado+"<br>")
+        // }
+        // function multipricacion (nr1,nr2){
+        //     let resultado = nr1 * nr2
+        //     alert(resultado)
+        //     console.log(resultado)
+        //     document.write("multipricacion: "+resultado+"<br>")
+        // }
+        // function division (nu1,nu2){
+        //     let resultado = nu1 / nu2 
+        //     alert(resultado)
+        //     console.log(resultado)
+        //     document.write("division: "+resultado+"<br>")
+        // }
+        //  let num =0   
+        //  let num2 =0
+        //  while(num <= 0 || num2 <=0 || isNaN(num) || isNaN(num2) ){
+        //     num =parseInt(prompt("Ingrese el primer numero"))   
+        //     num2 =parseInt(prompt("Ingrese el segundo numero"))
+        // }
+        // suma(num,num2)
+        // resta(num,num2)
+        // multipricacion(num,num2)
+        // division(num,num2)
+        
+        //10 Programa qe pida 6 numeros por pantalla y los meta en un array
+        // let contenedor=[],num=0
+        // for(let i=0 ; i < 6 ; i++){
+        //     num=parseInt(prompt("Ingrese un numero "+(i+1)))
+        //     contenedor[i] = num 
+        // }
+        // alert(contenedor)
+        // document.write(contenedor)
+        // console.log(contenedor)
+
+        //11 Mostrar el array anterior entero (todos sus elementos ) en el cuerpo de 
+        // la pagina y en la consola (usando funciones).
+        // function array(){
+        //     let contenedor=[],num=0
+        //     for(let i=0 ; i < 6 ; i++){
+        //         num=parseInt(prompt("Ingrese un numero "+(i+1)))
+        //         contenedor[i] = num 
+        //     }
+        //     document.write(contenedor)
+        //     console.log(contenedor)
+        // }
+        // array()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //12 Ordenar el array anterior y mostrarlo.
+        // // ORDEN ACENDENTE
+        //     let contenedor=[],num=0
+        //     for(let i=0 ; i < 6 ; i++){
+        //         num=parseInt(prompt("Ingrese un numero "+(i+1)))
+        //         contenedor[i] = num 
+        //     }
+        //     console.log(contenedor)
+        //     contenedor.sort((a,b)=>{
+        //         if(a==b){
+        //             return 0;
+        //         }
+        //         //si quiero cambiar a ORDEN DECENDENTE (a > b)
+        //         if(a < b){
+        //             return -1
+        //         }
+        //         return 1;
+        //     })
+        //     document.write(contenedor)
+          
+        // ORDEN DE CADENAS ALFABETICAMENTE
+            // let palablas=["homa","adios","zorro","gustar","orden","sol"]
+            // palablas.sort((a,b)=>{
+            //     if(a==b){
+            //         return 0;
+            //     }
+            //     //si quiero cambiar a ORDEN DECENDENTE (a > b)
+            //     if(a < b){
+            //         return -1
+            //     }
+            //     return 1;
+            // })
+            // document.write(palablas)
+        // MAYUSCULAS
+        //     let palablas=["Homa","adios","zorro","Autos","gustar","Obseqio","Orden","sol"]
+        //     palablas.sort((a,b)=>{
+        //         a = a.toLocaleLowerCase();
+        //         b = b.toLocaleLowerCase();
+        //         if(a==b){
+        //             return 0;
+        //         }
+        //         //si quiero cambiar a ORDEN DECENDENTE (a > b)
+        //         if(a < b){
+        //             return -1
+        //         }
+        //         return 1;
+        //     })
+        //     document.write(palablas)
+
+        // ORDEN DE OBJETOS :PRIMERO EDAD Y SI TIENE LA MISMA EDAD, SERA POR NOMBRE
+        let personas=[
+            {
+                name:"Julia",
+                age: 10,
+            },
+            {
+                name:"Miguel",
+                age: 45,
+            },
+            {
+                name:"Juan",
+                age: 24,
+            },
+            {
+                name:"Maria",
+                age: 60,
+            },
+            {
+                name:"Alfredo",
+                age: 45,
+            },
+            {
+                name:"Alba",
+                age: 10,
+            },
+        ];
+        personas.sort ((a,b)=>{
+            if(a.age > b.age){
+                return 1;
+            }
+            if (a.age < b.age){
+                return -1
+            }
+            // ESTO ES POR LAS MAYUSCULAS
+            if(a.name.toLowerCase() > b.name.toLowerCase()){
+                return 1;
+            }
+            if (a.name.toLowerCase() < b.name.toLowerCase()){
+                return -1
+            }
+        })
+        console.log(personas)
+
+        // ORDEN PRIMERO LOS NUMEROS +1000 ¿PERO NO ES ORDEN?
+        // let numberMasDeMil=[243 ,5555 ,45 ,1222 ,55 ,9000 ,11 ,1001]
+        // numberMasDeMil.sort((a,b)=>{
+        //     if(a<=1000){
+        //         return 1;
+        //     }
+        //     return -1
+        // })
+        // console.log(numberMasDeMil)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //13 Invertir el orden del array anterior y mostrarlo.
+        //-anterior array: menor a mayor ,actual array :mayor a menor 
+        // let numeros=[32,3,423,765,23,1,90]
+        // numeros.sort((a,b)=>{
+        //     if(a == b){
+        //         return 0
+        //     }
+        //     if(a > b){
+        //         return -1
+        //     }
+        //     return 1
+        // })
+        // console.log(numeros)
+
+        //14 Mostrar cuantos elementos tiene el array anterior
+        // let numeros=[32,3,423,765,23,1,90]
+        // for(x in numeros){
+        //     console.log(x)
+        // }
+
+        //15 Busqeda de un valor introducido por el usuario, qe nos diga si lo
+        //  encuentra y el array o no.
+        // let numeros=[32,3,423,765,23,1,90]
+        // let num=0,i=0
+        // num = parseInt(prompt("Ingrese un numero"))
+        
+        // while(i <= 10 ){
+        //     if(num == numeros[i]){ 
+        //         alert("encontraste el numero FELICIDADES")
+        //         break
+        //     }
+        //     // else{
+        //     //     alert("No hay")
+        //     // }
+        //     i++
+        // }
+
+        //16 EJERCICIO CON DOM Y EVENTOS (ya esta echo hay avajo)
+        //1 Formulario campos:Nombre, Apellido y edad 
+        //2 Boton de enviar el formulario: eventos submit
+        //3 Mostrar datos por pantalla
+        //4 Validacion del formulario para qe no metan datos vacios
+
+        
+        //17 Crea un formulario para guadar nombres de personas en el localstorage
+        //  y muestralos por pantalla en una lista html.
+
+        //18 En la lista anterior añade un boton para poder eliminar elementos 
+        // del localstorage.
+
+        //19 Haz una peticion ajax a un api rest publica y muestra un listado de datos.
+
+        //20 Muesta la fecha de hoy y un numero aleatorio del 1 al 120 en la 
+        // consola del navegador.  
+
+    </script>
+    <h3>formulario del ejercicio 16</h3>
+    <input type="text" id="name" placeholder="Nombre ">
+    <input type="text" id="lastName" placeholder=" Apellido ">
+    <input type="number" id="age" placeholder="Edad">
+
+    <input type="submit" value="Mostrar" id="mostrar" >
+
+    <p id="nombre"></p>
+    <p id="apellido"></p>
+    <p id="edad" ></p>
+
+    <script>
+        //16 EJERCICIO CON DOM Y EVENTOS
+        //1 Formulario campos:Nombre, Apellido y edad 
+        //2 Boton de enviar el formulario: eventos submit
+        //3 Mostrar datos por pantalla
+        //4 Validacion del formulario para qe no metan datos vacios
+
+        // objetos de html donde se les coloca el valor
+        const nombre = document.getElementById('name')
+        const apellido = document.getElementById('lastName')
+        const edad = document.getElementById('age')
+
+        // objetos de html donde se les muestra el valor <p>
+        const mNombre = document.getElementById('nombre')
+        const mApellido = document.getElementById('apellido')
+        const mEdad = document.getElementById('edad')
+
+        mostrar.addEventListener('click',emviar)
+
+        function emviar(){
+            const n= (nombre.value)
+            const a= (apellido.value)
+            const e= (edad.value)
+
+            if( n.length <= 0 || a.length <= 0 || e.length <= 0 ){
+                alert("debe completar los campos")
+            }else{
+                mNombre.innerHTML = n
+                mApellido.innerHTML = a
+                mEdad.innerHTML = e
+            }
+        }
+    </script>
+    
+</body>
+</html>

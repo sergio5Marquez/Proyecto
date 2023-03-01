@@ -1,0 +1,159 @@
+nav div h3{
+    color: white;
+}
+nav,
+.offcanvas {
+    background-color: #1e293b;
+
+}
+
+.logo a{
+        color: white;
+    }
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.mando{
+    width: 100px;
+    padding-right: 10px;
+}
+.logo{
+    display: flex;
+}
+
+.pocicion{
+    position: fixed;
+}
+
+
+
+
+ul div a{
+    /* el orden del contenido de offcanvas */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+}
+ul div a:hover{
+    color: white;
+}
+div a i{ 
+    font-size: 50px;
+} 
+
+section div h5{
+    color: white;
+}
+@media screen and (min-width: 767px ){
+    .fixed-top{
+        position: relative;
+    }
+    .separar{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px){
+    /* li{
+        display: none;
+    } */
+
+    .logo{
+        
+        padding-left:300px
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    /* li{
+        display: none;
+    } */
+    /* lo pongo en el centro pero es poco util */
+    .logo{
+        padding-left:450px ;
+        
+    }
+
+    /* elimina la posision fija */
+    .fixed-top{
+        position: relative;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* USUARIO */
+ .usuario{ 
+
+
+    color: rgb(64, 134, 224); 
+    position:absolute;
+    left: 10px;   
+    top: 10px; 
+    padding: 10px; 
+    display: flex; 
+    z-index: 100002;
+    }
+
+
+    div.modal-content{
+        width: 97%;
+
+        /* trasparencia */
+        background: linear-gradient(rgba(5, 7, 12, 0.50),
+         rgba(5, 7, 12, 0.50));
+         /* opacidad */
+         backdrop-filter: blur(3px);
+    }
+    .usuario:hover{
+    color: #fff;
+    }
+    .modal-header{
+        background: linear-gradient(rgba(5, 7, 12, 0.50),
+         rgba(5, 7, 12, 0.50));
+         backdrop-filter: blur(3px);
+    }
+    .modal-footer{
+    /* background-color: rgb(93, 104, 119) ; */
+    /* background: rgba(5, 7, 12, 0.30); */
+    opacity: 0,5;
+    
+    }
+    .user{
+    width: 50px;
+    font-size: 35px; 
+    }
+
+
+    /* esto te sirva para qe funcione */
+    .modal-backdrop{
+    /* --bs-backdrio-bg:none; */
+    position:inherit;
+    }  
+    /* aca termina */

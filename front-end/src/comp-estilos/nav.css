@@ -1,0 +1,64 @@
+.genero {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: white;
+}
+
+
+.genero:first-child {
+    background-image: url(/public/generos/aventura.jpg);
+    background-size: cover;}
+.genero:first-child:hover {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/public/generos/aventura.jpg);}
+.genero:nth-child(2) {
+    background-image: url(/public/generos/lucha.jpg);
+    background-size: cover;}
+.genero:nth-child(2):hover {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/public/generos/lucha.jpg);}
+.genero:nth-child(3) {
+    background-image: url(/public/generos/rol.jpg);
+    background-size: cover;}
+.genero:nth-child(3):hover {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/public/generos/rol.jpg);}
+.genero:last-child{
+    background-image: url(/public/generos/estrategia.jpg);
+    background-size: cover;}
+.genero:last-child:hover {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/public/generos/estrategia.jpg);
+}
+
+.genero .activo{
+    background-color: rgba(0, 0, 0, 0.7) ;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .containerGenero{
+        width: 100%;
+        display: flex;
+        padding: inherit;  
+    }
+}

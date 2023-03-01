@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plactica Borrar</title>
+   
+</head>
+<body>
+    <!-- ejercicio 2 -->
+    <!-- <input type="button" onclick="Calcula()" value="Calculo">
+    <input type="button" onclick="Calcula(5)" value="Otro Calculo">
+
+
+    <br><br><br>
+
+     <-- ejercicio 1 -->
+    <!-- <form action="" id="form"> -->
+        <!-- <input type="text" id="texto"> -->
+         <!--este solo es otra opcion <input type="submit"  value="Pulse aqui"> -->
+        <!-- <button>emviar</button> -->
+    <!-- </form>   -->
+    <p id="informacion">Aqui el resultado</p>
+    <button onclick="cambio('blue')">azul</button>
+    <button onclick="cambio('red')">rojo</button>
+    
+    <button onclick="cambio('')">normal</button>
+    
+    
+<script>
+    function cambio(nom){
+        let color=document.getElementById('informacion')
+        color.style.color=nom
+    }
+
+    // grados Farenhait
+    // let pasarFaren=(grado)=>{return fa=grado*1.8+32}
+
+    // let resul=pasarFaren(22)
+    // alert(`farenheit : ${resul}`)
+
+    // // grados Celsius
+    // let cel= (resul - 32) *5/9
+    // alert(`celsius : ${cel}`)
+    
+    // // ejercicio 2
+    // function Calcula(numero=1){
+    //     let calculo = numero * numero;
+    //     document.write(`<p/> Resultado = ${calculo}</p>`)
+    // }
+    // // Ejercicio funciones 1
+    // // function text(e){
+    // //     e.preventDefault();
+    // //     let mensaje = document.getElementById('texto').value
+    // //     console.log(mensaje)
+    // //     alert(mensaje)
+    // // }
+    // // ejercicio 1
+    // let boton =document.getElementById('form')
+    // console.log(boton)
+
+    // boton.addEventListener('submit', function(e){
+    //     e.preventDefault();
+    //     let mensaje = document.getElementById('texto').value
+    //     console.log(mensaje)
+    //     alert(mensaje)
+    // })
+
+
+
+
+    // metodos de objetos math
+
+    // mostrar el numeroo PI
+    // console.log(Math.PI)
+
+    // Mostrar solo dos numeros decimales
+    // console.log(Math.PI.toFixed(2))
+
+    // quitar los decimales
+    // console.log(Math.floor(5.60))
+
+    // // Redondea un nuemro
+    // console.log(Math.round(4.59))
+    // console.log(Math.round(Math.PI))
+
+    // // Pasar un numero negativo a su valor absoluto o positivo
+    // console.log(Math.abs(-444))
+
+    // // Calcular la potencia
+    // console.log(Math.pow(2,3))
+    // // Manera clasica
+    // console.log(2**3)
+
+    // // Crear un numero aleatorio entre 0 y 1 (NO incluye 1)
+    // console.log(Math.random())
+
+    // // Crear un numero aleatorio entre 0 y 10. algo
+    // console.log(Math.random() * 10 + 1)
+
+    // //Crear un numero aleatorio entre 0 y 10
+    // console.log(Math.floor(Math.random() * 1000 + 1 )) 
+
+
+
+    // // NUMEROS ALEATORIOS
+    // const generadorAleatorio=(min,max)=>{
+    //     return Math.floor(Math.random()*(max-min))+min;
+    // }
+    // for(let i=0 ; i<10 ; i++){
+    //     console.log(generadorAleatorio(1000,2000))
+    // }
+
+    // FUNCION CONTRASEÑA 
+    // let num='0123456789'
+    // let letras="qwertyuiopasdfghjklñQWERTYUIOPASDFGHJKLÑ"
+    // let simbolos='|¿¡?<>-.+*-!,;:#$%&/(=)'
+    // let todo=num+letras+simbolos
+
+    // const generarPasword=(longitud)=>{
+    //     let pasword=" ";
+    //     for(let x=0 ; x < longitud ; x++){
+    //         let aleatorio =Math.floor(Math.random()*todo.length);
+    //         pasword += todo.charAt(aleatorio)
+    //     }
+    //     return pasword;
+    // }
+
+    // for(let x = 0 ; x < 10 ; x++){
+    //     console.log(generarPasword(15))
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const arrayObjeto =[
+    //     {
+    //         nombre:"kei",
+    //         edad:19,
+    //         titulo:"programador",
+    //         genero:"man",
+    //     },
+    //     {
+    //         nombre:"Victoria",
+    //         edad:22,
+    //         titulo:"programador",
+    //         genero:"woman",
+    //     },
+    //     {
+    //         nombre:"florence",
+    //         edad:20,
+    //         titulo:"enfermera",
+    //         genero:"woman",
+    //     },
+    //     {
+    //         nombre:"Gilgametch",
+    //         edad:25,
+    //         titulo:"Rey",
+    //         genero:"man",
+    //     },
+    //     {
+    //         nombre:"sherlock",
+    //         edad:19,
+    //         titulo:"investigador",
+    //         genero:"man",
+    //     },
+    // ];
+    // for( borra of arrayObjeto){
+    //     delete borra.genero
+
+    // }
+    // console.log(arrayObjeto)
+
+    // for(eliminar in arrayObjeto){
+    //     delete arrayObjeto[eliminar].genero
+    // }
+
+    // console.log(arrayObjeto)
+
+    // for(descripsion in arrayObjeto){
+    //     let edades = arrayObjeto[descripsion].edad
+    //     console.log(edades)        
+    // }
+
+    // for(descripsion of arrayObjeto){
+    //     console.log(descripsion)
+    // }
+
+
+
+    // forma rapida
+    // let mayor= arrayObjeto.filter(p => p.edad > 20 )
+    // console.log(mayor)
+
+    // forma in necesaria creo 
+    // let mayor
+    // for(let i=0 ; i < arrayObjeto.length ;i++){
+    //     // console.log(arrayObjeto[i].nombre)
+    //     mayor = arrayObjeto.filter(m=>m.edad > 20)
+    // }
+    // console.log(mayor)
+
+    // for( d in mayor){
+    //     console.log("nombre : "+mayor[d].nombre)
+    //     console.log(mayor[d].edad)
+    //     console.log(mayor[d].titulo)
+    //     console.log(mayor[d].genero)
+    //     console.log("---------------------------")        
+    // }   
+    
+    // Orden
+    // arrayObjeto.sort((a,b)=>{
+    //     if(a.edad == b.edad){
+    //         return 0
+    //     }
+    //     if(a.edad < b.edad){
+    //         return -1
+    //     }
+    //     return 1
+    // })
+    // console.log(arrayObjeto)
+
+    // for(mostrar in arrayObjeto){  
+    //     document.write("Nombre :"+arrayObjeto[mostrar].nombre+"<br>")
+    //     document.write("Edad : "+arrayObjeto[mostrar].edad+"<br>")
+    //     document.write("Titulo : "+arrayObjeto[mostrar].titulo+"<br>")
+    //     document.write("Genero : "+arrayObjeto[mostrar].genero+"<br>")
+    //     document.write("---------------------- <br>")
+    // }
+
+    // for(mostrar in arrayObjeto){  
+    //     console.log(arrayObjeto[mostrar].nombre)
+    //     console.log(arrayObjeto[mostrar].edad)
+    //     console.log(arrayObjeto[mostrar].titulo)
+    //     console.log(arrayObjeto[mostrar].genero)
+    //     console.log("---------------------- ")   }
+
+    // arrayObjeto.sort((a,b)=>{
+    //     a.nombre = a.nombre.toLocaleLowerCase()
+    //     b.nombre =b.nombre.toLocaleLowerCase()
+    //     if(a.nombre== b.nombre){
+    //         return 1
+    //     }
+    //     if(a.nombre < b.nombre){
+    //         return -1
+    //     }
+    //     return 1
+    // })
+    // console.log(arrayObjeto)
+
+    // let edad=parseInt(prompt("Ingrese su edad para votar"))
+    // let final
+    // if(isNaN(edad)){
+    //     final="error usted NO ingreso un numero"
+    // }else{
+    //     final=(edad>=18)? "usted es mayor" : "usted es menor .perra" ;
+    // }
+    // document.write(final)
+        
+
+    // verificasion precisa de ingresar un numero del 1 al 12    
+        // let respuesta, mes = 13
+        // while( mes <= 0 || mes > 12 || isNaN(mes)){
+        //     mes=parseInt(prompt("Ingrese el numero de mes que seria del 1 al 12"))
+
+        //     if(mes==1 ||mes==3 ||mes==5 ||mes==7 ||mes==8 ||mes==10 ||mes==12 ){
+        //         respuesta="este mes tiene 31 dias"
+                
+        //     }else{
+                
+        //         respuesta=(mes==2)?"este mes tiene problavemente 30 dias" : "definitivamente tiene 30 dias" ;
+        //     }
+        // }
+        // document.write(respuesta)
+
+</script>
+
+
+
+
+</body>
+</html>

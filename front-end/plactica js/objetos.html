@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    
+    //1 Para comenzar vamos a crear un objeto sencillo que se usa para guardar 
+    // información sobre las calificaciones de un alumno. El curso contiene tres 
+    // materias: Ingles, programación y HTM, y el objeto contendrá el nombre 
+    // del alumno y la calificación en cada una de ellas. El script imprimirá 
+    // el nombre y la media de sus calificaciones
+    
+    // var notas, media;
+    // notas = {
+    //     nombre: 'Juan',
+    //     ingles: 10,
+    //     programacion: 9,
+    //     html: 8};
+    // media = (notas.ingles + notas.programacion+notas.html)/3;
+    // console.log("Media de "+notas.nombre+" es "+media)
+
+    //2 Define un objeto, mediante una expresión, que tenga dos propiedades: 
+    // precio y descuento y un método neto. El método calculará el precio con el
+    //  descuento aplicado. Los valores se pedirán por teclado
+    // let total=0
+    // let precio={
+    //     zapatos: 400,
+    //     descuento: 10,
+    // }
+    // total= precio.zapatos - precio.descuento * precio.zapatos /100
+    // console.log(`precio final del producto $${total}`)
+    //CORECCION 
+    // let vestido, dato;
+    // vestido = {
+    //     precio: 0,
+    //     descuento: 0,
+    //     neto: function(){ 
+    //             return this.precio*(1 - this.descuento/100)
+    //         }
+    // }
+    // vestido.precio = parseInt(prompt("Precio bruto "));
+    // vestido.descuento = parseInt(prompt("Precio bruto "));
+    
+    // console.log("El precio neto es "+vestido.neto()+"€");
+
+    //3 En esta propuesta debes crear una clase de nombre piedra (con class o con 
+    // function) con dos propiedades: masa, volumen y un método densidad que 
+    // calcule este valor (masa/volumen). Luego instancia al menos un objeto de 
+    // esta clase, dale un valor a su masa y a su volumen y ejecuta el método 
+    // densidad.
+    // function piedra(masa,volumem){
+    //     let propiedades={
+    //         masa: 0,
+    //         volumen : 0,
+    //         densidad: masa / volumem
+    //     }
+    //     propiedades.masa=masa
+    //     propiedades.volumen=volumem
+
+    //     console.log(propiedades.densidad)
+    // }
+    // let masa = parseInt(prompt("Ingrese la masa"))
+    // let volumen = parseInt(prompt("Ingrese el volumen"))
+    // piedra(masa,volumen)
+        // CORRECCION programacion orientado a objetos
+    // class piedra {
+    //     constructor(m,v){
+    //     this.masa = m;
+    //     this.volumen = v;
+    //     }
+    //     densidad = function(){return this.masa/this.volumen}
+    // }
+    // var oro = new piedra(194,10);
+    // console.log("densidad "+oro.densidad());
+
+    //4 Construye una clase usando function para implementar una cuenta de 
+    // efectivo. Poseerá dos propiedades: nombre del titular y saldo. Además debe
+    //  tener dos métodos: ingresar() y retirar(). El primero incrementa el saldo 
+    // en la cantidad indicada en el argumento y el segundo lo reduce. No se 
+    // puede sacar más de lo que exista en el saldo. 
+
+
+
+    
+</script>
+
+</body>
+</html>
