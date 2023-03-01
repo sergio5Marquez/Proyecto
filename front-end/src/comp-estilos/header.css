@@ -56,9 +56,6 @@ section div h5{
     .fixed-top{
         position: relative;
     }
-    .separar{
-        display: none;
-    }
 }
 
 @media screen and (min-width: 992px){
@@ -75,12 +72,8 @@ section div h5{
 
 @media screen and (min-width: 1024px) {
 
-    /* li{
-        display: none;
-    } */
-    /* lo pongo en el centro pero es poco util */
     .logo{
-        padding-left:450px ;
+        padding-left:415px ;
         
     }
 
