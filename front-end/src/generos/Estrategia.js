@@ -16,7 +16,7 @@ const Estrategia =()=>{
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="carousel-item active" data-bs-interval="3000">
                             <img src="/generos/flozen.png" class="d-block w-100" alt="warclaft" />
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Warcraft III the frozen throne</h5>
@@ -25,7 +25,7 @@ const Estrategia =()=>{
                                     a los habitantes de los Reinos del Este de Azeroth en nombre de la Plaga.</p>
                             </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="5000">
+                        <div class="carousel-item" data-bs-interval="3000">
                             <img src="/generos/age of spire.png" class="d-block w-100" alt="age of spire" />
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Age of empires</h5>

@@ -1,0 +1,62 @@
+.seccion {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    color: #fff;
+}
+
+.seccion:first-child {
+    background-image: url(/public/secciones/loglo.png);
+    background-size: cover;
+    background-position: right;}
+    
+.seccion:first-child:hover {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url(/public/secciones/loglo.png);}
+.seccion:nth-child(2) {
+    background-image: url(/public/secciones/jefes.png);
+    background-size: cover;
+    background-position: bottom;}
+.seccion:nth-child(2):hover {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url(/public/secciones/jefes.png);}
+.seccion:nth-child(3) {
+    background-image: url(/public/secciones/top.png);
+    background-size: cover;}
+.seccion:nth-child(3):hover {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url(/public/secciones/top.png);}
+.seccion:last-child {
+    background-image: url(/public/secciones/devate.png);
+    background-size: cover;}
+.seccion:last-child:hover {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url(/public/secciones/devate.png);}
+
+
+@media screen and (min-width: 767px ){
+    
+    .containerSeccion{
+        margin: 0 auto;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;  
+        align-items: center;  
+        flex-wrap: wrap;
+    }
+    .seccion{
+        width: 50%;
+        height: 320px;
+    }
+    .containerGenero {
+        padding-top: 0px; 
+    }
+}

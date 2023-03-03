@@ -1,0 +1,91 @@
+.fondo{
+    background-color: red;
+}
+
+#fDragon{
+    background: linear-gradient(91deg,#500e0e 0%, #aa1111 40%, #500e0e 80%);
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.container-x{
+    width: 80%;
+    /* display: flex;
+    justify-content: center; */
+    margin: 0 auto;
+}
+
+.pantalla1000 h5 {
+    display: none;
+}
+
+
+.cartel1{
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/public/secciones/jefes.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cajaSecc:hover{
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5));
+    backdrop-filter: blur(1px); 
+    
+}
+.cajaSecc{
+    width: 100%;
+    /* height: 430px; */
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 10px;
+}
+.cajaSecc h5{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.cajaSecc p{
+    color: #fff;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .cajaSecc{
+        display: flex;
+        margin: 20px;
+    }
+    .cajaSecc h5{
+        display: none;
+    }
+    .cajaSecc p{
+        padding: 10px;
+    }
+    .pantalla1000 h5{
+        display: block;
+        padding: 10px;
+    }
+
+    #fDragon{
+        background-image: url(/public/secciones/dragonJefeFondo.jpg);
+        /* background-size: cover;
+        background-position:top; */
+
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+    }
+
+}

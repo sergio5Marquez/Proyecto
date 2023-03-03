@@ -16,14 +16,14 @@ const Rol = () => {
                                 aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="5000">
+                            <div class="carousel-item active" data-bs-interval="3000">
                                 <img src="/generos/ciber.png" class="d-block w-100" alt="Cyberpunk 2077" />
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Cyberpunk 2077</h5>
                                     <p>Es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. </p>
                                 </div>
                             </div>
-                            <div class="carousel-item" data-bs-interval="5000">
+                            <div class="carousel-item" data-bs-interval="3000">
                                 <img src="/generos/elden.png" class="d-block w-100" alt="marvel vs capcom" />
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Elden Ring</h5>
