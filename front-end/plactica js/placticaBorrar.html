@@ -16,23 +16,40 @@
     <br><br><br>
 
      <-- ejercicio 1 -->
-    <!-- <form action="" id="form"> -->
-        <!-- <input type="text" id="texto"> -->
-         <!--este solo es otra opcion <input type="submit"  value="Pulse aqui"> -->
-        <!-- <button>emviar</button> -->
-    <!-- </form>   -->
-    <p id="informacion">Aqui el resultado</p>
-    <button onclick="cambio('blue')">azul</button>
-    <button onclick="cambio('red')">rojo</button>
+    <form action="" id="form">
+        <input type="text" id="texto">
+         <!-- este solo es otra opcion <input type="submit"  value="Pulse aqui"> -->
+        <button>emviar</button>
+    </form>  
     
-    <button onclick="cambio('')">normal</button>
-    
+    <!-- ejercicio 9 funciones -->
+    <!-- <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button id="mostrar" onclick="cambio()">resultado</button>
+     -->
+
     
 <script>
-    function cambio(nom){
-        let color=document.getElementById('informacion')
-        color.style.color=nom
-    }
+    
+    // ejercicio 9 funciones
+    // function cambio(){
+    //     let n1=document.getElementById('num1')
+    //     // console.log(n1.value)
+    //     let n2=document.getElementById('num2')
+    //     let mostrar =document.getElementById('mostrar')
+    //     // console.log(n2.value)
+    //     const numero1 = parseFloat(n1.value)
+    //     console.log(numero1)
+    //     const numero2 = parseFloat(n2.value)
+    //     console.log(numero2)
+
+    //     let resultado 
+    //     resultado = numero1 * numero2
+
+    //     mostrar.innerText=resultado
+    //     // alert(resultado)
+    //     console.log(resultado)
+    // }
 
     // grados Farenhait
     // let pasarFaren=(grado)=>{return fa=grado*1.8+32}
@@ -56,21 +73,21 @@
     // //     console.log(mensaje)
     // //     alert(mensaje)
     // // }
-    // // ejercicio 1
-    // let boton =document.getElementById('form')
-    // console.log(boton)
+    // ejercicio 1
+    let boton =document.getElementById('form')
+    console.log(boton)
 
-    // boton.addEventListener('submit', function(e){
-    //     e.preventDefault();
-    //     let mensaje = document.getElementById('texto').value
-    //     console.log(mensaje)
-    //     alert(mensaje)
-    // })
-
-
+    boton.addEventListener('submit', function(e){
+        e.preventDefault();
+        let mensaje = document.getElementById('texto').value
+        console.log(mensaje)
+        alert(mensaje)
+    })
 
 
-    // metodos de objetos math
+
+
+    // metodos de objetos math-----------------------------------------------------------------------------------------
 
     // mostrar el numeroo PI
     // console.log(Math.PI)
@@ -101,6 +118,11 @@
 
     // //Crear un numero aleatorio entre 0 y 10
     // console.log(Math.floor(Math.random() * 1000 + 1 )) 
+
+
+
+
+
 
 
 

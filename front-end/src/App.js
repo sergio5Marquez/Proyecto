@@ -31,7 +31,11 @@ function App() {
         <Route path='/' element={<Inicio/>}/>
       </Routes>
       
+      
+
       <Nav/>
+      
+
       <Routes>
        
         <Route path='aventura' element={<Aventura/>}/>
@@ -49,6 +53,8 @@ function App() {
       
       </Routes>
       </BrowserRouter>
+        
+
 
 
       

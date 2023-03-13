@@ -1,9 +1,15 @@
 import React from "react";
 import '../comp-estilos/nav.css'
 
-import { NavLink } from "react-router-dom";
+import { NavLink,useLocation} from "react-router-dom";
 
 const Nav=()=>{
+
+    // const location = useLocation();
+    // if (location.pathname != '/'){
+    //     return
+    // }
+
     return(
         <nav>
             <div className="containerGenero">

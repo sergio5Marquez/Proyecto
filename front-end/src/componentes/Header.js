@@ -3,7 +3,7 @@ import React from "react";
 import '../comp-estilos/header.css'
 import Usuario from "./Usuario";
 
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Header=()=>{
@@ -19,7 +19,7 @@ const Header=()=>{
                     <div class="logo   align-items-center ">
                         <img class="mando" src="/logo.png" alt="logo"/>
 
-                        <NavLink to='/'><h3>Game play</h3></NavLink>
+                        <h3><Link to='/'>Game Play</Link></h3>
                         
                     </div>
                 

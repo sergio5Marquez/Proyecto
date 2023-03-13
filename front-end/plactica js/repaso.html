@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+    <script>
+        const juegos =[
+            {
+                videoJ:'Elden ring',
+                consola:'Play Station',
+                año:2022,
+                juegoDelAño:true
+            },
+            {
+                videoJ:'Super Mario',
+                consola:'nintendo',
+                año:1987,
+                juegoDelAño:false
+            },
+            {
+                videoJ:'Gears of War 4',
+                consola:'xbox',
+                año:2016,
+                juegoDelAño:false
+            }
+        ]
+        for(game in juegos){
+            delete juegos[game].juegoDelAño
+            // console.log(juegos[game])
+            // console.log(game) indice
+        }
+        const Tconsolas=[
+            ...juegos,
+            {
+                videoJ:'warclaft III:The Frozen Throne ',
+                consola:'pc',
+                año:2003,
+            }
+        ]
+        // console.log(Tconsolas)
+
+        // const mTconsolas= Tconsolas.map(m => m.videoJ.toLocaleUpperCase())
+        // console.log(mTconsolas)
+
+        // const deceo= Tconsolas.filter(f=> f.consola=='pc' || f.consola=='Play Station')
+        // console.log(deceo)
+
+        // const primero= Tconsolas.find( p=> p.año < 2003)
+        
+        // console.log(primero)
+        
+        // const compu= Tconsolas.map(q => q )
+        // console.log(compu)
+
+            const perros=[
+                {
+                    tipo:'chihuajua',
+                    edad:10
+                },
+                {
+                    tipo:'caniche',
+                    edad:2
+                },
+                {
+                    tipo:'lablador',
+                    edad:7
+                },
+            ]
+            // funcion para sumar el array
+            const suma=(ns)=>{
+                let acumulado=0
+                for(i =0; i < ns.length ;i++){
+                    acumulado += ns[i]
+                }
+                return acumulado
+            }
+
+            // le saco la edad al array de objeto perros
+            const Pedad= perros.map(e=> e.edad)
+            console.log(Pedad)
+
+            // llamo ala funcion suma ,le paso por parametro el array de edad qe saqe
+            const resultado= suma(Pedad)
+            // ahora saco el promedio de edad
+            console.log(resultado / Pedad.length)
+
+
+
+    </script>
+</body>
+
+</html>

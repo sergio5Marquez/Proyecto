@@ -7,85 +7,132 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <p>1 mandar nomble y mostrar</p>
+    <form action="" id="want">
+        <input type="text" id="contenido" placeholder="Ingrese nombre">
+        <button>mostrar Nombre</button>
+        <h3 id="mostrar"></h3>
+    </form> -->
+    <!-- <p>2 mini calculadora</p> -->
+    <form action="" id="form">
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+        <button>resultado</button>
+
+        <h1 id="resultado"></h1>
+    </form>
 
 <script>
+    // 1 mandar nombre y mostrar
+    // const mostrar =document.getElementById('want')
+    // mostrar.addEventListener('submit',function(e){
+    //     const ver =document.getElementById('contenido').value
+    //     let etiqueta=document.getElementById('mostrar')
+    //     console.log(etiqueta)
+    //     e.preventDefault();
+    //     etiqueta.innerHTML=ver
+    // })
     
-    //1 Para comenzar vamos a crear un objeto sencillo que se usa para guardar 
-    // información sobre las calificaciones de un alumno. El curso contiene tres 
-    // materias: Ingles, programación y HTM, y el objeto contendrá el nombre 
-    // del alumno y la calificación en cada una de ellas. El script imprimirá 
-    // el nombre y la media de sus calificaciones
+    // 2 mini calculadora
+    const cuenta =document.getElementById('form')
     
-    // var notas, media;
-    // notas = {
-    //     nombre: 'Juan',
-    //     ingles: 10,
-    //     programacion: 9,
-    //     html: 8};
-    // media = (notas.ingles + notas.programacion+notas.html)/3;
-    // console.log("Media de "+notas.nombre+" es "+media)
-
-    //2 Define un objeto, mediante una expresión, que tenga dos propiedades: 
-    // precio y descuento y un método neto. El método calculará el precio con el
-    //  descuento aplicado. Los valores se pedirán por teclado
-    // let total=0
-    // let precio={
-    //     zapatos: 400,
-    //     descuento: 10,
-    // }
-    // total= precio.zapatos - precio.descuento * precio.zapatos /100
-    // console.log(`precio final del producto $${total}`)
-    //CORECCION 
-    // let vestido, dato;
-    // vestido = {
-    //     precio: 0,
-    //     descuento: 0,
-    //     neto: function(){ 
-    //             return this.precio*(1 - this.descuento/100)
-    //         }
-    // }
-    // vestido.precio = parseInt(prompt("Precio bruto "));
-    // vestido.descuento = parseInt(prompt("Precio bruto "));
+    cuenta.addEventListener('submit',function(e){
+        let n1 =document.getElementById('num1').value
+        let n2 =document.getElementById('num2').value
+        let result=document.getElementById('resultado')
+        e.preventDefault();
+        
+        if(n1 =='' || n2 =='' || isNaN(n1) || isNaN(n2) ){
+            alert('Ingresar los numeros')
+        }else{
+                
+            var one =parseFloat(n1)
+            var two =parseFloat(n2)
+            
+            result.innerHTML=`${one} + ${two} = ${one+two}`
+        }
+    })
     
-    // console.log("El precio neto es "+vestido.neto()+"€");
-
-    //3 En esta propuesta debes crear una clase de nombre piedra (con class o con 
-    // function) con dos propiedades: masa, volumen y un método densidad que 
-    // calcule este valor (masa/volumen). Luego instancia al menos un objeto de 
-    // esta clase, dale un valor a su masa y a su volumen y ejecuta el método 
-    // densidad.
-    // function piedra(masa,volumem){
-    //     let propiedades={
-    //         masa: 0,
-    //         volumen : 0,
-    //         densidad: masa / volumem
+    // const alumnos =[
+    //     {
+    //         alumno:'max',
+    //         edad:32,
+    //         genenro:'masculino',
+    //         universitario:true
+    //     },
+    //     {
+    //         alumno:'zara',
+    //         edad:23,
+    //         genenro:'femenino',
+    //         universitario:true
+    //     },
+    //     {
+    //         alumno:'Jedifoles',
+    //         edad:21,
+    //         genenro:'masculino',
+    //         universitario:true
+    //     },
+    //     {
+    //         alumno:'victoria',
+    //         edad:22,
+    //         genenro:'femenino',
+    //         universitario:false
+    //     },
+    //     {
+    //         alumno:'lasawa',
+    //         edad:20,
+    //         genenro:'femenino',
+    //         universitario:true
+    //     },
+    //     {
+    //         alumno:'LILI',
+    //         edad:18,
+    //         genenro:'femenino',
+    //         universitario:false
     //     }
-    //     propiedades.masa=masa
-    //     propiedades.volumen=volumem
-
-    //     console.log(propiedades.densidad)
+    // ]
+    // for(student of alumnos){
+    //     delete student.genenro
     // }
-    // let masa = parseInt(prompt("Ingrese la masa"))
-    // let volumen = parseInt(prompt("Ingrese el volumen"))
-    // piedra(masa,volumen)
-        // CORRECCION programacion orientado a objetos
-    // class piedra {
-    //     constructor(m,v){
-    //     this.masa = m;
-    //     this.volumen = v;
+
+    // const clase=[
+        
+    //         ...alumnos,
+    //     {
+    //         profesor:'Felipe',
+    //         edad:45
+    //     },{
+    //         profesor:'melisa',
+    //         edad:45
     //     }
-    //     densidad = function(){return this.masa/this.volumen}
+        
+    // ]
+
+    // console.log(clase)
+
+    // // despues de que terminen una carrera de 5 años
+    // const edades = clase.map(e => e.edad + 5)
+    // console.log(edades)
+    // // quien no es universitario
+    // const isNotStudent = alumnos.filter(e => e.universitario == false)
+    // console.log(isNotStudent)
+    // // el mas joven
+    // const joven = clase.find(e => e.edad <=18)
+    // console.log(joven)
+
+
+    // // Muestrame una clase completa con profesores y alumnos veteranos
+    // const prof = clase.filter(f=> f.edad >40)
+
+    // for(maestros of prof){
+    //     document.write('Profesores :'+maestros.profesor+'<br>')
     // }
-    // var oro = new piedra(194,10);
-    // console.log("densidad "+oro.densidad());
 
-    //4 Construye una clase usando function para implementar una cuenta de 
-    // efectivo. Poseerá dos propiedades: nombre del titular y saldo. Además debe
-    //  tener dos métodos: ingresar() y retirar(). El primero incrementa el saldo 
-    // en la cantidad indicada en el argumento y el segundo lo reduce. No se 
-    // puede sacar más de lo que exista en el saldo. 
-
-
+    // const claseC = clase.filter( s =>s.universitario == true)
+    // for(alumno of claseC){
+    //     document.write('alumnos: '+alumno.alumno+'<br>')
+    // }
+    
 
     
 </script>
