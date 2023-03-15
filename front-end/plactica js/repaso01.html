@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgb(136, 126, 126);
+            
+        }
+        p{
+            color: white;
+        }
+        input{
+            display: block;
+        }
+    </style>
+</head>
+
+
+<body>
+    <script>
+        const mascotas=[
+            {
+                animal:'perro',
+                edad:5,
+                domestico:true
+            },
+            {
+                animal:'gato',
+                edad:7,
+                domestico:true
+            },
+            {
+                animal:'caballo',
+                edad:15,
+                domestico:false
+            },
+        ]
+
+        console.log(mascotas)
+
+        for(mascota in mascotas){
+            mascotas[mascota].AnimalExotica=false
+        }
+
+        const animalD=mascotas.filter(d=>d.domestico ==true)
+
+        console.log(animalD)
+
+        const mascotaD=[
+            ...animalD,
+            {
+                animal:'loro',
+                edad:5,
+                domestico:true,
+                exotico:true
+            }
+        ]
+        console.log(mascotaD)
+        mascotaD[0].edad=9
+        for(mascotaM of mascotaD){
+            mascotaM.animal=mascotaM.animal.toUpperCase()
+        }
+        const aExotico=mascotaD.find(e=>e.exotico)
+        console.log(aExotico)
+
+        const promedio=(num)=>{
+            let total=0
+            for(let i=0; i< num.length ;i++){
+                total += num[i]
+            }
+            return total
+        }
+
+        const edades=mascotaD.map(e => e.edad)
+        console.log(edades)
+
+        const proEdad= promedio(edades)
+        console.log(proEdad)
+        // promedio de edad de los 3 animales
+        const promedioEdad = proEdad / edades.length
+        console.log(promedioEdad) 
+
+
+    </script>
+</body>
+</html>
