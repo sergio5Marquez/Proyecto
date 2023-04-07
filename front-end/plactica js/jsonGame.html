@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const videoJuegos=[
+            {
+                consola:'play station 2',
+                añoDeSalida:2005,
+                juego:{
+                    nombre:'god of war II',
+                    salida:15/5/2008
+                }
+            },
+            {
+                consola:'xbox',
+                añoDeSalida:2006,
+                juego:{
+                    nombre:'halo',
+                    salida:05/4/2007
+                }
+            },
+            {
+                consola:'sega',
+                añoDeSalida:1991,
+                juego:{
+                    nombre:'socic',
+                    salida:05/9/2000
+                }
+            },
+            {
+                consola:'nintendo',
+                añoDeSalida:1990,
+                juego:{
+                    nombre:'super mario',
+                    salida:10/9/1991
+                }
+            }
+        ]
+
+        console.log(videoJuegos);
+
+
+        const newGeneration=[
+            ...videoJuegos,
+            {
+                consola:'ppsspp',
+                añoDeSalida:2010,
+                juego:{
+                    nombre:'metal grud ',
+                    salida:12/7/2001
+                }
+
+            }
+        ]
+        console.log(newGeneration)
+
+        for(eli in newGeneration){
+        //    newGeneration[eli].consola=newGeneration[eli].consola.toLocaleUpperCase()
+            // if(newGeneration[eli].consola=='nintendo'){
+            //     newGeneration[eli].consola='ninrendo we'
+            // }
+        }
+        for(dele of newGeneration){
+            dele.consola=dele.consola.toUpperCase()
+
+            dele.juego = {
+                ...dele.juego,
+                salida:null
+            }
+
+            if(dele.consola=='nintendo'){
+                dele.consola ='nintendo we'
+                // console.log('golasfsdgsdgsdfsdf')
+                dele.añoDeSalida=1932343
+            }
+        }
+
+        
+
+
+        console.log(newGeneration)
+
+        const nuevaGenerasion = newGeneration.filter(n=>n.añoDeSalida > 2000)
+        console.log(nuevaGenerasion)
+
+        const game=newGeneration.map(j=>j.juego)
+        console.log(game)
+
+        const old=newGeneration.find(v=>v.añoDeSalida <2000)
+        console.log(old)
+
+
+
+        const viedoG=newGeneration.find(g=>g.juego.nombre='halo' )
+        console.log(viedoG)
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -60,6 +60,12 @@
 }
 
 
+.pantalla1000 h5{
+    display: none;
+}
+
+
+
 @media screen and (min-width: 1024px) {
 
     .cajaSecc{

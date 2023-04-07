@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form{
+            display: inline-flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" >
+        <input type="text" id="one" placeholder="number">
+        <button id="cuenta">tabla (MULTIPLICACION)</button>
+        <h1 id="ver"></h1>
+    </form>
+    
+    <br>
+
+    <script>
+        const producto=document.getElementById('cuenta')
+        producto.addEventListener('click',multi)
+        function multi (e){
+            const num1=document.getElementById('one').value
+            const see=document.getElementById('ver')
+            e.preventDefault()
+            const n1=parseFloat(num1)
+            if(isNaN(n1)){
+                alert('ERROR,ingrese un numero valido')
+            }else{
+                // let nombre='batman'
+                // see.innerHTML= nombre
+                // document.write('hola mundo')
+                let tabla = []
+                for(let i=0; i<11 ;i++){
+                    tabla[i] = `${n1} x ${i} = ${ n1 * i } <br>` 
+                }
+                // document.write(tabla)
+                see.innerHTML=tabla
+            }
+        }
+    // ----------------------------------------------------------------------------------------------------
+        const personas=[
+            {
+                nombre:'oscar',
+                profecion:'dentista',
+                familia:{
+                    esposa:'camila',
+                    hijo:'emanuel',
+                    mascotas:[
+                        'perro',
+                        'gato',
+                    ]
+                },
+                edad:47
+            },
+            {
+                nombre:'carlos',
+                profecion:'programador',
+                familia:{
+                    esposa:'azuzena',
+                    hijo:'victor',
+                    mascotas:[
+                        'perro',
+                        'perro',
+                    ]
+                },
+                edad:37
+            },
+            {
+                nombre:'max',
+                profecion:'gerente',
+                familia:{
+                    esposa:'sasha',
+                    hija:'maka',
+                    mascotas:[
+                        'gato',
+                    ]
+                },
+                edad:49
+            },
+        ]
+
+        console.log(personas)
+
+        const vecinos=[
+        {
+                nombre:'carl',
+                profecion:'albañil',
+                familia:{
+                    mascotas:[
+                        'perro',
+                        'conejo'
+                    ]
+                },
+                edad:27
+            },
+            {
+                nombre:'mariano',
+                profecion:'oficinista',
+                familia:{
+                    novia:'sasha',
+                },
+                edad:30
+            },
+        ]
+        console.log(vecinos)
+        // aca unos a alos dos grupos
+        const barrio=[
+            ...personas,
+            ...vecinos
+        ]
+        console.log(barrio)
+
+        for(fami of barrio){
+            // console.log(fami)
+            fami.profecion = fami.profecion.toUpperCase()
+        }
+        // las mascotas
+        const mascota = barrio.map( m => m.familia.mascotas)
+        console.log(mascota)
+        // tipo qe tiene de mascota un conejo
+        const joven = barrio.find(j=>j.familia.mascotas.includes('conejo') )
+        console.log(joven)
+        // solo las familias con hijo o hija
+        const family=barrio.filter(f=>f.familia.hijo || f.familia.hija)
+        console.log(family)
+
+        
+        console.log('sucede una tragedia y algunos susesos')
+
+        const Despues = barrio
+        
+        for(tragi in Despues){
+            // fallece la esposa y madre
+            if(Despues[tragi].nombre=='oscar'){
+                delete Despues[tragi].familia.esposa
+            }
+            // adopta perros de la calle
+            if(Despues[tragi].nombre=='max'){
+                Despues[tragi].familia.mascotas=[
+                    ...Despues[tragi].familia.mascotas,
+                    'perro','perro','perro']
+            }
+            // separacion 
+            if(Despues[tragi].nombre=='carlos'){
+                Despues[tragi].nombre = 'Sergio Marquez'
+                Despues[tragi].edad=30
+                Despues[tragi].familia={
+                    ...Despues[tragi].familia,
+                    // ...barrio[tragi].familia.hijo,
+                    hija:'victoria',
+                    hijoMayor:'luis'
+                }
+            }
+            // consigue novia y cambia de profecion
+            if(Despues[tragi].nombre=='carl'){
+                Despues[tragi].familia={
+                    novia:'lili',
+                    ...Despues[tragi].familia.mascotas
+                }
+                Despues[tragi].profecion='arquitecto'.toUpperCase()
+            }
+            // se casa o es 
+            if(Despues[tragi].nombre=='mariano'){
+                Despues[tragi].familia={
+                    ...Despues[tragi].familia ,
+                    amante:'susana',
+                    segundaAmante:'lisiana',
+                    mascotas:['perro']
+                }
+            }
+        }
+        console.log(Despues)
+
+        for(ver of Despues){
+            if(ver.nombre=='Sergio Marquez'){   
+                ver.nombre='sujeto desaparecido'
+                document.write(`${ver.nombre} <br>`)
+                document.write(`edad: ${ver.edad} <br>`)
+                document.write(`profecion: ${ver.profecion} <br>`)
+                document.write(`esposa: ${ver.familia.esposa} <br>`)
+                document.write(`hijo M: ${ver.familia.hijoMayor} <br>`)
+                document.write(`hija: ${ver.familia.hija} <br>`)
+                document.write(`hijo: ${ver.familia.hijo} <br>`)
+                document.write(`mascotas: ${ver.familia.mascotas} <br>`)   
+            }
+        }
+        // me salto un vecino
+        for(continuar of  Despues){
+            if(continuar.nombre=='oscar'){
+                continue
+            }
+            console.log(continuar)
+        }
+        console.log('-------------------------')
+        // recorro el json pero me paro en un punto
+        for(pausa in Despues){
+            if(Despues[pausa].nombre=='max'){
+                break
+            }
+            console.log(Despues[pausa])
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

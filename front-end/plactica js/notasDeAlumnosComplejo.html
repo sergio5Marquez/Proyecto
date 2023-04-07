@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        const clase1=[
+            {
+                id:1,
+                informacion:{
+                    nombre:'oscar',
+                    apellido:'javier',
+                    edad:9
+                },
+                notas:[3,8,10,5,7],
+            },
+            {
+                id:2,
+                informacion:{
+                    nombre:'roier',
+                    apellido:'janival',
+                    edad:8
+                },
+                notas:[3,7,4,6,10],
+            },
+            {
+                id:3,
+                informacion:{
+                    nombre:'beatris',
+                    apellido:'sosa',
+                    edad:9
+                },
+                notas:[6,8,10,9,7],
+            },
+        ]
+        console.log(clase1)
+
+        const clase2=[
+        {
+                id:1,
+                informacion:{
+                    nombre:'gabi',
+                    apellido:'flay',
+                    edad:9
+                },
+                notas:[3,6,5,5,4],
+            },
+            {
+                id:2,
+                informacion:{
+                    nombre:'rin',
+                    apellido:'balaira',
+                    edad:8
+                },
+                notas:[3,7,4,6,9],
+            },
+            {
+                id:3,
+                informacion:{
+                    nombre:'zeroTwo',
+                    apellido:'sin appellido',
+                    edad:10
+                },
+                notas:[6,9,10,9,6],
+            },
+            {
+                id:4,
+                informacion:{
+                    nombre:'hiro',
+                    apellido:'Sin apellido',
+                    edad:10
+                },
+                notas:[7,8,8,7,7],
+            }
+        ]
+        console.log(clase2)
+
+        const classNew=[
+            ...clase1,
+            ...clase2
+        ]
+
+        console.log(classNew)
+
+        const notas=classNew.map(n=>n.notas)
+        // console.log(notas)
+            let i=0
+        // ordeno los id de indentificacion de cada alumno
+        for( i ;i<classNew.length ;i++){
+            classNew[i].id = i+1
+        }
+        console.log(classNew)
+        // classNew[1].id=7
+        const sumaPro=(nota)=>{
+            promedio=0
+            for(let i=0; i<nota.length ;i++){
+                promedio += nota[i]
+            }
+            return promedio
+        }
+
+        // for(pro of classNew){
+        //     if(pro.id==1){
+        //         pro.informacion ={
+        //             ...pro.informacion,
+        //             nombre:'sergio'
+        //         }  
+        //         sumaPro(pro.notas)
+        //         pro.PromedioFinal=sumaPro(pro.notas)/pro.notas.length
+        //     }
+        // }
+
+        // le ingrese el promedio de todos ,acada uno en especifico
+        for(let i=0; i<classNew.length ;i++){
+            if(classNew[i].id==(i+1)) {
+                sumaPro(classNew[i].notas)
+                classNew[i].PromedioFinal=Math.round(sumaPro(classNew[i].notas) / classNew[i].notas.length)
+            }
+        }
+        
+
+        // Sergio, tenes que cambiar el filter por un find. Filter devuelve siempre un array.
+        // const usuario=classNew.filter(a=>a.id==1)
+        // console.log(usuario)
+
+        const usuario=classNew.find(a=>a.id==1)
+        console.log(usuario)
+
+        let promedioF = sumaPro(usuario.notas)
+        console.log(promedioF/usuario.notas.length)
+
+
+        const desaprobados=classNew.filter(d=>d.PromedioFinal < 7)
+        console.log(desaprobados)
+
+        const aprobado=classNew.find(a=>a.PromedioFinal>=7)
+        console.log(aprobado)
+
+        const registro=classNew.map(r=>r.PromedioFinal)
+        console.log(registro)
+
+
+
+
+        console.log(Math.round(4.59))
+
+
+
+
+
+
+
+
+
+    </script>
+</html>

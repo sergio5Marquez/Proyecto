@@ -30,8 +30,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Inicio/>}/>
       </Routes>
-      
-      
+
 
       <Nav/>
       
@@ -53,12 +52,6 @@ function App() {
       
       </Routes>
       </BrowserRouter>
-        
-
-
-
-      
-    
         
       <Footer/>   
     

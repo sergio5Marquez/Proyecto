@@ -8,7 +8,7 @@
 
     <style>
         body{
-            background-color: rgb(136, 126, 126);
+            background-color: rgb(255, 0, 0);
             
         }
         p{
@@ -19,72 +19,129 @@
         }
     </style>
 </head>
-
-
+    
 <body>
     <script>
-        const mascotas=[
+        const juegosN=[
             {
-                animal:'perro',
-                edad:5,
-                domestico:true
+                juego:'Resident evil 4',
+                costo:5000,
+                consolas:[
+                    'pc',
+                    'play station',
+                    'xbox'
+                ]
             },
             {
-                animal:'gato',
-                edad:7,
-                domestico:true
+                juego:'Elden ring',
+                costo:11000,
+                consolas:[
+                    'pc',
+                    'play station'
+                ]
             },
             {
-                animal:'caballo',
-                edad:15,
-                domestico:false
+                juego:'smash bros',
+                costo:15000,
+                consolas:[
+                    'niintendo portatil',
+                    'nintendo wi'
+                ]
+            },
+            {
+                juego:'sonic',
+                costo:100,
+                consolas:[
+                    'pc',
+                    'sega'
+                ]
             },
         ]
 
-        console.log(mascotas)
+        console.log(juegosN)
+        // delete juegosN[3]
 
-        for(mascota in mascotas){
-            mascotas[mascota].AnimalExotica=false
-        }
-
-        const animalD=mascotas.filter(d=>d.domestico ==true)
-
-        console.log(animalD)
-
-        const mascotaD=[
-            ...animalD,
+        const Njuego=[
+            ...juegosN,
             {
-                animal:'loro',
-                edad:5,
-                domestico:true,
-                exotico:true
-            }
+                juego:'sekiro',
+                costo:10000,
+                consolas:[
+                    'pc',
+                    'play station',
+                ]
+            },
+            {
+                juego:'god of war (racknarok)',
+                costo:12000,
+                consolas:[
+                    'pc',
+                    'play station',
+                    'ppsspp'
+                ]
+            },
         ]
-        console.log(mascotaD)
-        mascotaD[0].edad=9
-        for(mascotaM of mascotaD){
-            mascotaM.animal=mascotaM.animal.toUpperCase()
-        }
-        const aExotico=mascotaD.find(e=>e.exotico)
-        console.log(aExotico)
+        console.log(Njuego)
+        const JuegosCaros=Njuego.filter(c=>c.costo >= 5000)
+        console.log(JuegosCaros)
 
-        const promedio=(num)=>{
-            let total=0
-            for(let i=0; i< num.length ;i++){
-                total += num[i]
+        for(gami in JuegosCaros){
+            if(JuegosCaros[gami].juego =='Resident evil 4'){
+                JuegosCaros[gami].juego='resident evil 4 (remake)'
+                JuegosCaros[gami].costo=15000
             }
-            return total
+            if(JuegosCaros[gami].juego =='smash bros'){
+                JuegosCaros[gami].costo=5200
+            }
+            JuegosCaros[gami].juego=JuegosCaros[gami].juego.toUpperCase()
+            JuegosCaros[gami].description={
+                                    genero:'accion-aventura',
+                                    horas:'+10',
+                                    restriction:18,
+                                    idiomas:['english','español']
+                                }
         }
 
-        const edades=mascotaD.map(e => e.edad)
-        console.log(edades)
+        const noSon=JuegosCaros.filter(n=>n.consolas.includes('play station'))
+        console.log(noSon)
 
-        const proEdad= promedio(edades)
-        console.log(proEdad)
-        // promedio de edad de los 3 animales
-        const promedioEdad = proEdad / edades.length
-        console.log(promedioEdad) 
+        const sumaTotal=(game)=>{
+            let dinero=0
+            for(let i=0; i<game.length ;i++){
+                dinero += game[i]
+            }
+            return dinero
+        }
 
+        const todos=JuegosCaros.map(t=>t.costo)
+        console.log(sumaTotal(todos))
+
+
+        // for(jp in JuegosCaros){
+        //     JuegosCaros[jp].description={
+        //         ...JuegosCaros[jp].description,
+        //         idiomas:[...JuegosCaros[jp].description.idiomas, 'japones']
+        //     }
+        // }
+
+        // for(japan of JuegosCaros){
+        //     japan.description={
+        //         ...japan.description,
+        //         idiomas:[...japan.description.idiomas,'JAPONES']
+        //     }
+        // }
+
+        for(let i=0; i<JuegosCaros.length; i++){
+            JuegosCaros[i].description={
+                ...JuegosCaros[i].description,
+                idiomas:[...JuegosCaros[i].description.idiomas,'kanji']
+            }
+        }
+
+        
+
+
+        // const movil=stores.find(m=> m.electrodomesticos.includes('telefonos') )
 
     </script>
 </body>
