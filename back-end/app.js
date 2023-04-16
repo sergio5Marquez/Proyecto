@@ -4,13 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-require('dotenv').config();
-var session = require('express-session');
+require('dotenv').config(); //al app le digo que trabajo con la configuracion / tambien le digo que este proyecto va a trabajar con variavres de enterno
+var session = require('express-session');//trabajo con variabres de seccion
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');//yo qui
-var adminRouter = require('./routes/admin/novedades');// yo aqui
+var adminRouter = require('./routes/admin/novedades');// generamos la nueva pagina
 
 var app = express();
 
@@ -24,20 +24,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({
+app.use(session({ //se avilita la variabre de seccion
   secret: 'PW2021awqyeudj',
   cookie: {maxAge: null},
   resave: false,
   saveUninitialized: true
 }))
 
-secured = async (req, res, next) => {
+secured = async (req, res, next) => { //chekea la seguridad,controlar qe si o si tenemos qe estar logiados para pasar ala pagina siguiente
   try {
     console.log(req.session.id_usuario);
     if (req.session.id_usuario) {
-      next();
+      next(); //si tengo el id de la base de datos ,entonces da siguiente
     } else {
-      res.redirect('/admin/login');
+      res.redirect('/admin/login'); // sino redireccioname al login
     }
   } catch (error) {
     console.log(error)
@@ -47,8 +47,9 @@ secured = async (req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);//yo aqui
-app.use('/admin/novedades', secured, adminRouter); //yo aqui
+app.use('/admin/novedades', secured, adminRouter); //habilitar ,(secured) variabre que chekea la seguridad
 
+//si el codigo esta de 53 linea  para avajo ,no va a funcionar 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

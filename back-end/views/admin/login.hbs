@@ -1,23 +1,25 @@
-<div class="login-box">
-    <form action="/admin/login" method="post" >
-        <h2>ingrese usuario</h2>
-        <div class="input-box">
-            <span class="icon">
-                <i class="fa-solid fa-user"></i>
-            </span>
-            <input type="text" name="usuario" required>
-            <label for=""  >usuario</label>
-        </div>
-        <div class="input-box">
-            <span class="icon">
-                <i class="fa-solid fa-lock"></i>
-            </span>
-            <input type="password" name="password" required>
-            <label for="">contraseña</label>
-        </div>
-        <button type="submit">Ingresar</button>
-    </form>
-    {{#if error}}
-        <p > <strong> Usuario y/o contrasela incorrecto </strong></p>
-    {{/if}}
-</div>
+<section>
+    <div class="login-box">
+        <form action="/admin/login" method="post" >
+            <h2>ingrese usuario</h2>
+            <div class="input-box">
+                <span class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <input type="text" name="usuario" required>
+                <label for=""  >usuario</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <i class="fa-solid fa-lock"></i>
+                </span>
+                <input type="password" name="password" required>
+                <label for="">contraseña</label>
+            </div>
+            <button type="submit">Ingresar</button>
+        </form>
+        {{#if error}}
+            <p > <strong> Usuario y/o contrasela incorrecto </strong></p>
+        {{/if}}
+    </div>
+</section>
