@@ -41,7 +41,51 @@ router.post('/agregar',async(req, res, next) => { //nuevo
   }
 });
 
+router.get('/eliminar/:id', async (req, res, next) => {
+  var id = req.params.id;
+  
+  await novedadesModel.deletNovedadesById(id);
+  res.redirect('/admin/novedades');
+
+});
+
+router.get('/modificar/:id', async (req, res, next) => {
+  var id = req.params.id;
+  console.log(req.params.id);
+  var novedad = await novedadesModel.getNovedadById(id);
+
+  console.log(req.params.id);
+  res.render('admin/modificar', {
+    layout: 'admin/layout',
+    novedad
+  });
+});
+
+// modificar novedades
+router.post('/modificar', async (req, res, next) => {
+  try {
+
+    var obj = { //capturar los datos
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo
+    }
+    console.log(obj)
+    console.log(req.body.id)
+
+    await novedadesModel.modificarNovedadById(obj, req.body.id);
+    res.redirect('/admin/novedades');
+
+  } catch (error){
+    console.log(error)
+    res.render('admin/modificar', {
+      layout: 'admin/layout',
+      error: true,
+      message:'No se modifico la novedad'
+    })
+  }
+})
+
 module.exports = router;
 
 //necesario para la creacion de una pagina o nueva pestaña
-

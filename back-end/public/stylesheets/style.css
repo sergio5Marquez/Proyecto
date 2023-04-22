@@ -137,3 +137,32 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+/* seccion de modificacion  */
+.textarea_cuerpo textarea{
+  width: 100%;
+  height: 59px;
+  padding: 15px;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border-color: #bfbfbf;
+  max-height: 330px;
+}
+textarea:is(:focus, :valid){
+  border-width: 2px;
+  padding: 14px;
+}
+textarea::-webkit-scrollbar{
+  width: 0px; 
+}
+
+.col h4 ,label{
+  color: white;
+}
+
+.container h3,p {
+  color: white;
+}
