@@ -1,0 +1,75 @@
+.novedad_cartel{
+    /* position: relative;  */
+    top: 80px;  
+    width: 100%;
+    height: 190px;
+    background-color: #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/public/secciones/devate.png);
+    background-size: cover; 
+    background-position: center;
+}
+.novedad_cartel h2{
+    color: #fff;
+    font-family: 'Press Start 2P',cursive;
+    
+}
+
+.novedad_container{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+.novedad_img{
+    width: 100%;
+    height: 100%;
+}
+.novedad_titulo {
+    color: rgb(0, 0, 0);
+    font-family:fantasy ;
+    /* font-size: 35px; */
+}
+.novedad_sub {
+    color: rgb(67, 67, 70);
+    font-family:fantasy ;
+    /* font-size: 30px; */
+}
+.novedad_cuerpo{
+    color: rgb(42, 42, 66);
+    font-size: 20px;
+    font-family:sans-serif;
+}
+
+
+@media screen and (max-width: 524px) {
+    .novedad_titulo{
+        color: rgb(212, 9, 9);
+        font-family:fantasy ;
+        font-size: 25px;
+    }
+    .novedad_sub{
+        color: rgb(67, 67, 70);
+        font-family:fantasy ;
+        font-size: 20px;
+    }
+    .novedad_cuerpo{
+        color: rgb(42, 42, 66);
+        font-size: 15px;
+        font-family:sans-serif;
+    }
+}
+

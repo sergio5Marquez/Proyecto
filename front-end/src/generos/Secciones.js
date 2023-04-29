@@ -50,8 +50,9 @@ const Secciones = () => {
 
 
             <div className="seccion">
-                <h4>Debates</h4>
-                
+            <NavLink to='novedades'>
+                <h4>Novedades</h4>
+            </NavLink>
                 <p>Descansa en nuestro pequeño espacio para debatir y dar tu opinion respecto al contenido que te interese
                     ,conoce el pundo de vista de los demas y comparte tu opinion personal, enterate de datos que desconocias
                     pero por soble todo pasatelo bien.

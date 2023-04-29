@@ -18,6 +18,7 @@ import Secciones from './generos/Secciones';
 import Top from './paginas/Top';
 import Loglos from './paginas/Logros';
 import Jefes from './paginas/Jefes';
+import Novedades from './paginas/Novedades';
 
 function App() {
   return (
@@ -49,7 +50,7 @@ function App() {
       <Route path='top' element={<Top/>}/>
       <Route path='loglos' element={<Loglos/>}/>
       <Route path='jefes' element={<Jefes/>}/>
-      
+      <Route path='novedades' element={<Novedades/>}/>
       </Routes>
       </BrowserRouter>
         

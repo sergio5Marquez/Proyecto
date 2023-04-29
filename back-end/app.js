@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var fileUpload = require('express-fileupload');
+var cors = require('cors');
 
 require('dotenv').config(); //al app le digo que trabajo con la configuracion / tambien le digo que este proyecto va a trabajar con variavres de enterno
 var session = require('express-session');//trabajo con variabres de seccion
@@ -11,6 +13,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');//yo qui
 var adminRouter = require('./routes/admin/novedades');// generamos la nueva pagina
+var apiRouter = require('./routes/api');
 
 var app = express();
 
@@ -43,12 +46,16 @@ secured = async (req, res, next) => { //chekea la seguridad,controlar qe si o si
     console.log(error)
   }
 }
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);//yo aqui
 app.use('/admin/novedades', secured, adminRouter); //habilitar ,(secured) variabre que chekea la seguridad
-
+app.use('/api', cors(), apiRouter);
 //si el codigo esta de 53 linea  para avajo ,no va a funcionar 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

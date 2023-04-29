@@ -1,5 +1,5 @@
 nav div h3{
-    color: white;
+    color: rgb(252, 252, 252);
 }
 nav,
 .offcanvas {
@@ -8,7 +8,7 @@ nav,
 }
 
 .logo a{
-        color: white;
+        color: rgb(255, 255, 255);
     }
 
 .navbar-toggler {
@@ -84,6 +84,17 @@ section div h5{
 
 }
 
+@media screen and (max-width: 449px) {
+    .logo a{
+        font-size: 15px;
+        /* padding-right: 10px; */
+        margin-top: 10px;
+    }
+    .mando{
+        width: 50px;
+    }
+    
+}
 
 
 
@@ -101,8 +112,10 @@ section div h5{
 
 
 
- /* USUARIO */
- .usuario{ 
+
+
+/* USUARIO */
+.usuario{ 
 
 
     color: rgb(64, 134, 224); 
