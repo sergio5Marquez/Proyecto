@@ -16,7 +16,7 @@ const Secciones = () => {
         <section className="containerSeccion">
 
             <div className="seccion">
-            <NavLink to='loglos'>
+            <NavLink to='loglos' >
                 <h4>Logros y Datos curiosos</h4>
             </NavLink>    
                 <p>Un logro, también conocido a veces como un trofeo o un desafío, es una meta definida fuera de los
@@ -26,7 +26,7 @@ const Secciones = () => {
             </div>
 
             <div  className="seccion">
-                <NavLink to='jefes'>
+                <NavLink to='jefes' >
                 <h4>Jefes Dificiles</h4>
                 </NavLink>
                 <p>Los jefes mas dificiles de los videojuegos que te han puesto a prueba ,y que casi te provocan una
@@ -37,7 +37,7 @@ const Secciones = () => {
 
 
             <div className="seccion" >
-            <NavLink to='top'>
+            <NavLink to='top' >
                 <h4>Top de videojuegos del año </h4>
             </NavLink>
                 <p>Muchos de nosotros podríamos hacer una larga lista de videojuegos que han patrocinado nuestra infancia,
@@ -50,7 +50,7 @@ const Secciones = () => {
 
 
             <div className="seccion">
-            <NavLink to='novedades'>
+            <NavLink to='novedades' >
                 <h4>Novedades</h4>
             </NavLink>
                 <p>Descansa en nuestro pequeño espacio para debatir y dar tu opinion respecto al contenido que te interese
