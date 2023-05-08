@@ -33,20 +33,6 @@ const Usuario =(props)=>{
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return(
         <div class=" navbar-brad text-white   fw-semibold fs-4" > 
                     <div> <i class="user fa-solid fa-comment" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
